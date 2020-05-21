@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Easier navigation: .., ..., ...., .....
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -8,7 +8,6 @@ alias .....="cd ../../../.."
 alias cdp="cd projects"
 
 switch (uname)
-  case Darwin
     alias ls="ls -lG"
   case '*'
     alias ls="ls -l --group-directories-first --color=always"
@@ -24,6 +23,9 @@ alias rm="rm -v"
 alias ssh="ssh -v"
 alias cal="cal -m"
 #alias cat="bat"
+
+# Dotfile tracking
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -48,6 +50,7 @@ alias dbash="docker run -it --rm --entrypoint /bin/bash -v (pwd):/root/src -w /r
 
 # Docker Compose Run
 alias dr="docker-compose run --rm"
+  case Darwin
 
 # Docker Hygiene
 alias dclean="docker rm (docker ps -aqf status=exited)"
