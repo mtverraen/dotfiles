@@ -7,14 +7,15 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias cdp="cd projects"
 
-switch (uname)
-    alias ls="ls -lG"
-  case '*'
-    alias ls="ls -l --group-directories-first --color=always"
-end
-
-alias l="ls -lF"
+alias l="ls"
 alias la="ls -lAF"
+
+switch (uname)
+    case Darwin
+        alias ls="ls -lG"
+    case '*'
+        alias ls="ls -l --group-directories-first --color=always"
+end
 
 #Shortcuts
 alias mv="mv -v"
@@ -50,7 +51,6 @@ alias dbash="docker run -it --rm --entrypoint /bin/bash -v (pwd):/root/src -w /r
 
 # Docker Compose Run
 alias dr="docker-compose run --rm"
-  case Darwin
 
 # Docker Hygiene
 alias dclean="docker rm (docker ps -aqf status=exited)"
