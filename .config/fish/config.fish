@@ -1,7 +1,7 @@
 # Application specific
 . ~/.config/fish/config.prompt
 . ~/.config/fish/config.git
-. ~/.config/fish/config.vim
+#. ~/.config/fish/config.vim
 . ~/.config/fish/config.shortcuts
 
 # Welcome Message
