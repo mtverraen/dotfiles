@@ -1,4 +1,6 @@
-nstall command-line tools using Homebrew.
+#!/usr/bin/env bash
+
+#Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -15,7 +17,6 @@ brew install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.
-brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
@@ -48,6 +49,7 @@ brew install gnupg
 brew install nmap
 #brew install pngcheck
 #brew install socat
+brew install moreutils
 #brew install sqlmap
 #brew install tcpflow
 #brew install tcpreplay
