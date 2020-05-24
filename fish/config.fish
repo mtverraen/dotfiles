@@ -7,6 +7,7 @@
 switch (uname)
 	case Linux
 		. ~/.config/fish/config.docker
+		. ~/.config/fish/config.wsl
 end
 
 # Welcome Message
