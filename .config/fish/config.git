@@ -224,4 +224,3 @@ complete -f -c git -n '__fish_git_using_command format-patch' -a '(__fish_git_br
 
 ### aliases (custom user-definer commands)
 complete -c git -n '__fish_git_needs_command' -a '(git config --get-regexp alias | sed -e "s/^alias\.\(\S\+\).*/\1/")' -d 'Alias (user-defined command)'
-

@@ -1,5 +1,0 @@
-#!/usr/bin/fish
-
-#WSL specific config
-
-alias ch="cd /mnt/c/Users/mtver"
